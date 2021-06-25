@@ -66,10 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function getData() {
   try {
-    const response = await fetch("./../data/sica-data-libros.json", {
-      method: "GET",
-      mode: "same-origin"
-    });
+    const response = await fetch(
+      "https://raw.githubusercontent.com/Scoowy/iw-sica-chart/main/data/sica-data-libros.json",
+      {
+        method: "GET"
+      }
+    );
 
     const data = await response.json();
     return data;
@@ -122,3 +124,6 @@ function proccessData(data) {
 
   return booksPerYear;
 }
+
+// https://raw.githubusercontent.com/Scoowy/iw-sica-chart/main/data/sica-data-libros.json
+// ./../data/sica-data-libros.json
