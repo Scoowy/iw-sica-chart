@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sica-Chart</title>
+
+    <!-- Open Sans Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+
+    <!-- Bulma -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+
+    <!-- Mis estilos -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@7.6.0/dist/math.min.js"></script>
+
+    <!-- Chart.js CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@4.6.0/dist/materia/bootstrap.min.css"
+    />
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <section class="hero is-fullheight is-default is-bold">
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="/"> SicaChart </a>
+              <span class="navbar-burger burger" data-target="navbarMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+              <div class="navbar-end">
+                <div class="tabs is-right">
+                  <ul>
+                    <li class="is-active"><a href="/">Home</a></li>
+                    <li><a href="#">Documentación</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <div class="columns is-vcentered">
+            <div class="column is-5">
+              <div id="loader">
+                <progress class="progress is-primary" max="100">10%</progress>
+                <p>Graficando...</p>
+              </div>
+              <canvas
+                id="chartCanvas"
+                class="is-hidden"
+                width="500"
+                height="450"
+              ></canvas>
+              <!-- <figure class="image is-4by3">
+              </figure> -->
+            </div>
+            <div class="column is-6 is-offset-1">
+              <h1 class="title is-2">SicaChart</h1>
+              <h2 class="subtitle is-4">
+                Trabajo de clase del componente de Ingeniería Web.
+              </h2>
+              <br />
+              <p>
+                Se muestra el consumo de la API de
+                <a href="https://sica.utpl.edu.ec/api/">Sica UTPL</a>, de la
+                cual se obtubo la información completa sobre los libros
+                publicados. Mediante el siguiente endpoint:
+              </p>
+              <pre>
+https://sica.utpl.edu.ec/api/books/?token=################</pre
+              >
+              <p>La muestra es de un total de 2204 libros.</p>
+              <h3>Interpretación del grafico</h3>
+              <p>
+                Se puede observar que en el periodo entre 2000 al 2018 existe un
+                crecimiento casi exponencial, de las publicaciones de libros,
+                sin embargo en los ultimos años se ha visto de forma muy notoria
+                un decremento de las publicaciones, probableente devido al tema
+                de la pandemia del COVID 19.
+              </p>
+              <p class="has-text-centered">
+                <a
+                  href="https://github.com/Scoowy/iw-sica-chart"
+                  class="button is-medium is-info is-outlined"
+                >
+                  <span class="icon-text">
+                    <span class="icon">
+                      <i class="fab fa-github fa-2x"></i>
+                    </span>
+                    <span> GitHub </span>
+                  </span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-foot">
+        <div class="container">
+          <div class="tabs is-centered">
+            <ul>
+              <li>
+                <a href="https://github.com/Scoowy"
+                  >Trabajo realizado por Juan Gahona. 2021</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./js/bulma.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
