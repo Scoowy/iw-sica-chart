@@ -70,6 +70,7 @@ async function getData() {
       "https://raw.githubusercontent.com/Scoowy/iw-sica-chart/main/data/sica-data-libros.json",
       {
         method: "GET"
+        // mode: "same-origin"
       }
     );
 
